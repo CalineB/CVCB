@@ -1,0 +1,360 @@
+
+:root {
+    --bg-color: rgb(20, 19, 19);
+    --second-bg-color: goldenrod;
+    --text-color: rgb(229, 154, 40);
+    --main-color: blanchedalmond;
+    --logo-color: rgba(120, 18, 18, 0.818); 
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 3rem 1rem;
+    background-color: rgba(71, 42, 48, 0.794);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: 800px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+
+.logo span {
+    text-shadow: 0, 0, 25px var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 3rem;
+    font-weight: 500px;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar {
+    padding-right: 20rem !important;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size:  3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.heading {
+    font-size: 8 rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.work {
+    padding: 100px 15px;
+    background: var(--logo-color);
+}
+
+.work h2 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+.timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--bg-color);
+    left: calc(50% - 1px);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.timeline-item p:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.goal {
+    display: none;
+    color: rgb(93, 122, 135);
+}
+
+.goal:hover {
+    text-decoration: none;
+}
+
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--text-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date {
+    font-size: 3rem;
+    font-weight: 800px;
+    color: blanchedalmond;
+    margin: 6px 0 15px;
+}
+
+.timeline-content {
+    background-color: var(--bg-color);
+    border: 3px solid var(--text-color);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(--logo-color);
+    cursor: pointer;
+    transition: 0.3 ease-in-out;
+}
+
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: var(--bg-color);
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.8;
+    margin: 0;
+    position: relative;
+}
+
+.scroll-btn {
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--text-color);  
+    background-color: var(--bg-color); 
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    bottom: 30px; 
+    right: 30px;  
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: var(--main-color); 
+}
+
+
+@media (max-width: 894px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+
+    footer {
+        padding: 10px;
+    }
+
+    .scroll-btn {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 894px) {
+    .navbar.active {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 894px) {
+        .header {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+    .timeline-items {
+        padding: 10px;
+    }
+
+    .timeline-content {
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .timeline-date {
+        font-size: 1.9rem;
+    }
+
+    .goal {
+        font-size: 12px;
+    }
+
+    #scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .header {
+        padding: 5px;
+    }
+
+    .timeline-items {
+        padding: 5px;
+    }
+
+    .timeline-content {
+        font-size: 13px;
+    }
+
+    a.logo {
+        padding-left: 4rem;
+    }
+    
+    .bx-menu-alt-right{
+        padding-left: 4rem;
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+    
+    .goal {
+        font-size: 18px;
+    }
+}
+
