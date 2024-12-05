@@ -10,12 +10,12 @@ form.addEventListener('submit', async (e) => {
     email: formData.get('email'),
     subject: formData.get('subject'),
     message: formData.get('message'),
-    message: formData.get('phone'),
+    phone: formData.get('phone'),
 
   };
 
   try {
-    const response = await fetch('http://localhost:3000/send-email', {
+    const response = await fetch('http://localhost:4000/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
