@@ -358,3 +358,16 @@ footer p {
     }
 }
 
+
+
+@media (max-width: 730px) {
+
+.timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: 0;
+}
+}
