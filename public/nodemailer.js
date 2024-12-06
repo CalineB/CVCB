@@ -1,4 +1,6 @@
 const form = document.querySelector('#contact-form');
+const responseMessage = document.querySelector('#response-message');
+
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -23,11 +25,30 @@ form.addEventListener('submit', async (e) => {
 
     const result = await response.json();
     if (result.success) {
-      alert('Email successfully send !');
+      form.style.display = 'none';
+      responseMessage.style.display = 'block'; 
+      responseMessage.textContent = 'Email successfully sent, I\'ll contact you ASAP!';
+      responseMessage.style.color = 'green';
     } else {
-      alert('Erreur : ' + result.message);
+      form.style.display = 'none';
+      responseMessage.style.display = 'block';
+      responseMessage.textContent = 'Error: ' + result.message;
+      responseMessage.style.color = 'red';
+
+      setTimeout(() => {
+        responseMessage.style.display = 'none';
+        form.style.display = 'block';
+      }, 10000);
     }
+
   } catch (error) {
-    alert('Error sending your email');
+    form.style.display = 'block';
+    responseMessage.style.display = 'block';
+    responseMessage.textContent = 'An error occurred while sending your email. Please try again later.';
+    responseMessage.style.color = 'red';
+    setTimeout(() => {
+      responseMessage.style.display = 'none';
+      form.style.display = 'block';
+    }, 5000);
   }
 });
