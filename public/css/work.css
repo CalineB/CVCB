@@ -63,9 +63,6 @@ body {
     border-bottom: 3px solid transparent;
 }
 
-.navbar {
-    padding-right: 20rem !important;
-}
 
 .navbar a:hover,
 .navbar a.active {
@@ -163,7 +160,7 @@ span {
 
 .timeline-item:nth-child(odd) {
     padding-right: calc(50% + 30px);
-    text-align: right;
+    text-align: left;
 }
 
 .timeline-item:nth-child(even) {
@@ -183,7 +180,7 @@ span {
 }
 
 .timeline-date {
-    font-size: 3rem;
+    font-size: 1.7rem;
     font-weight: 800px;
     color: blanchedalmond;
     margin: 6px 0 15px;
@@ -228,39 +225,37 @@ footer {
     background-color: var(--main-color);
     padding: 10px;
     text-align: center;
+    position: relative;
 }
 
 footer p {
-    color: var(--bg-color);
     font-size: 15px;
     font-style: italic;
     line-height: 1.8;
     margin: 0;
-    position: relative;
 }
 
 .scroll-btn {
-    display: inline-block;
-    font-size: 3rem;
-    color: var(--text-color);  
-    background-color: var(--bg-color); 
-    padding: 10px 15px;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    position: absolute;
-    bottom: 30px; 
-    right: 30px;  
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+        display: inline-block;
+        font-size: 2rem;
+        color: var(--text-color);  
+        background-color: var(--bg-color); 
+        padding: 10px 15px;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        bottom: 30px; 
+        right: 30px;  
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
 .scroll-btn:hover {
     background-color: var(--main-color); 
 }
 
 
-@media (max-width: 894px) {
+@media (max-width: 886px) {
     .header {
         flex-direction: column;
         align-items: flex-start;
@@ -272,15 +267,18 @@ footer p {
         width: 100%;
     }
 
-    .navbar a {
-        margin: 10px 0;
-    }
-
     #menu-icon {
         display: block;
     }
 
+    .navbar.active {
+        display: flex;
+    }
 
+    .navbar a {
+        margin-top: 13px;
+    }
+    
     footer {
         padding: 10px;
     }
@@ -288,16 +286,7 @@ footer p {
     .scroll-btn {
         font-size: 1.5rem;
     }
-}
 
-@media (max-width: 894px) {
-    .navbar.active {
-        display: flex;
-    }
-}
-
-
-@media screen and (max-width: 894px) {
         .header {
             flex-direction: column;
             align-items: flex-start;
@@ -314,19 +303,14 @@ footer p {
     }
 
     .timeline-date {
-        font-size: 1.9rem;
+        font-size: 1.7rem;
     }
 
     .goal {
         font-size: 12px;
     }
-
-    #scroll-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-    }
 }
+
 
 @media screen and (max-width: 769px) {
     .header {

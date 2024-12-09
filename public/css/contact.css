@@ -39,7 +39,6 @@ body {
 .logo {
     font-size: 3rem;
     color: var(--main-color);
-    font-weight: 800px;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -56,15 +55,9 @@ body {
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
-    margin-left: 3rem;
-    font-weight: 500px;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    margin-left: 3rem;    transition: 0.3s ease;
 }
 
-.navbar {
-    padding-right: 20rem !important;
-}
 
 .navbar a:hover,
 .navbar a.active {
@@ -76,10 +69,6 @@ body {
     font-size:  3.6rem;
     color: var(--main-color);
     display: none;
-}
-
-span {
-    color: var(--main-color);
 }
 
 .logo span {
@@ -102,6 +91,7 @@ h1 {
 
 .contact form {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -159,6 +149,7 @@ h1 {
 }
 
 
+/*
 #response-message {
     padding: 10px;
     border-radius: 5px;
@@ -175,7 +166,7 @@ h1 {
     color: red;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
-  }
+  } */
 
 footer {
     display: flex;
@@ -197,13 +188,12 @@ footer p {
 
 .scroll-btn {
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--text-color);  
     background-color: var(--bg-color); 
     padding: 10px 15px;
     border-radius: 50%;
     text-align: center;
-    text-decoration: none;
     position: absolute;
     bottom: 30px; 
     right: 30px;  
@@ -234,7 +224,7 @@ footer p {
     }
 }
 
-@media (max-width: 893px) {
+@media (max-width: 886px) {
     .header {
         flex-direction: column;
         align-items: flex-start;
@@ -246,6 +236,24 @@ footer p {
         flex-direction: column;
         align-items: center;
         padding: 10px;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin-top: 13px;
     }
 
     .social-icons {
@@ -264,20 +272,22 @@ footer p {
     .scroll-btn {
         font-size: 1.5rem;
     }
+}
 
-    .navbar {
-        display: none;
+
+@media (max-width: 730px) {
+    .contact form {
+        display: flex;
         flex-direction: column;
-        width: 100%;
-        padding: 0;
+        align-items: center; 
     }
 
-    .navbar a {
-        margin: 10px 0;
-    }
-
-    #menu-icon {
+    .contact form .btn {
         display: block;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        border-radius: 0.5rem;
     }
 }
 
@@ -302,11 +312,5 @@ footer p {
     footer {
         padding: 8px;
         font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 893px) {
-    .navbar.active {
-        display: flex;
     }
 }

@@ -63,9 +63,6 @@ body {
     border-bottom: 3px solid transparent;
 }
 
-.navbar {
-    padding-right: 20rem !important;
-}
 
 .navbar a:hover,
 .navbar a.active {
@@ -242,20 +239,19 @@ footer p {
 }
 
 .scroll-btn {
-    display: inline-block;
-    font-size: 3rem;
-    color: var(--text-color);  
-    background-color: var(--logo-color); 
-    padding: 10px 15px;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    position: absolute;
-    bottom: 30px; 
-    right: 30px;  
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+        display: inline-block;
+        font-size: 2rem;
+        color: var(--text-color);  
+        background-color: var(--logo-color); 
+        padding: 10px 15px;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        bottom: 30px; 
+        right: 30px;  
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
 .scroll-btn:hover {
     background-color: var(--main-color); 
@@ -263,7 +259,7 @@ footer p {
 
 
 
-@media (max-width: 894px) {
+@media (max-width: 886px) {
         .header {
             flex-direction: column;
             align-items: flex-start;
@@ -276,12 +272,16 @@ footer p {
         width: 100%;
     }
 
-    .navbar a {
-        margin: 10px 0;
-    }
-
     #menu-icon {
         display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin-top: 13px;
     }
 
     .timeline-items {
@@ -294,12 +294,6 @@ footer p {
 
     .scroll-btn {
         font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 894px) {
-    .navbar.active {
-        display: flex;
     }
 }
 

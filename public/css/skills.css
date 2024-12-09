@@ -62,9 +62,6 @@ body {
     border-bottom: 3px solid transparent;
 }
 
-.navbar {
-    padding-right: 20rem !important;
-}
 
 .navbar a:hover,
 .navbar a.active {
@@ -172,6 +169,31 @@ li {
     line-height: 1.5;
     font-weight: bold;
 }
+
+
+.arrow-container {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.arrow {
+    font-size: 5rem;
+    color: #333;
+    display: inline-block;
+    animation: arrow-bounce 2s infinite;
+}
+
+@keyframes arrow-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
 
 .hard.skills {
     width: 100%;
@@ -281,13 +303,12 @@ footer p {
 
 .scroll-btn {
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--text-color);  
     background-color: var(--bg-color); 
     padding: 10px 15px;
     border-radius: 50%;
     text-align: center;
-    text-decoration: none;
     position: absolute;
     bottom: 30px; 
     right: 30px;  
@@ -300,6 +321,43 @@ footer p {
 }
 
 
+
+@media (max-width: 886px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin-top: 13px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .skills {
+        margin-top: 3rem;
+    }
+
+    .scroll-btn {
+        font-size: 1.5rem;
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -320,16 +378,6 @@ footer p {
         padding: 10px;
     }
 
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .navbar a {
-        margin: 10px 0;
-    }
 
     #menu-icon {
         display: block;
@@ -355,10 +403,6 @@ footer p {
     footer {
         padding: 10px;
     }
-
-    .scroll-btn {
-        font-size: 1.5rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -368,12 +412,6 @@ footer p {
 
     .logo {
         font-size: 1.6rem;
-    }
-
-    .navbar {
-        display: block;
-        text-align: center;
-        width: 100%;
     }
 
     #menu-icon {
@@ -408,53 +446,5 @@ footer p {
     .skills {
         margin-top: 3rem;
     }
-}
-
-
-
-
-@media (max-width: 846px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar a {
-        margin: 10px 0;
-    }
-
-    #menu-icon {
-        display: block;
-    }
-
-    footer {
-        padding: 10px;
-    }
-
-    .scroll-btn {
-        font-size: 1.5rem;
-    }
-
-    .skills {
-        margin-top: 3rem;
-    }
-}
-
-@media (max-width: 846px) {
-    .navbar.active {
-        display: flex;
-    }
-
-    .skills {
-        margin-top: 7rem;
-    }
-
-
 }
 

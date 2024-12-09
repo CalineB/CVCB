@@ -273,13 +273,11 @@ footer p {
 
 .scroll-btn {
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--text-color);  
     background-color: var(--bg-color); 
     padding: 10px 15px;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
+    border-radius: 50%;    text-decoration: none;
     position: absolute;
     bottom: 30px; 
     right: 30px;  
@@ -340,11 +338,102 @@ footer p {
         padding: 10px;
     }
 
+}
+
+
+
+@media (max-width: 886px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .home-img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .home-right {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .home-img img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin-top: 13px;
+    }
+
+    .timeline-items {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
     .scroll-btn {
         font-size: 1.5rem;
     }
-
 }
+
+@media (max-width: 630px) {
+    .home-content p {
+        font-size: 1.7rem;
+        font-weight: 300px;
+        line-height: 3rem;
+        padding-left: 0;
+        margin-top: 1rem;
+        position: sticky;
+        width: 100%;
+}
+
+.social-icons {
+    display: flex
+;
+    grid-area: 1.5rem;
+    margin-top: 2rem;
+    padding-left: 0;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 0;
+}
+
+.home-img {
+    margin-bottom: 10px;
+}
+
+.home-left, .home-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
 
 @media (max-width: 489px) {
     .home-content {
@@ -368,107 +457,6 @@ footer p {
         padding: 8px;
         font-size: 0.8rem;
     }
-}
-
-@media (max-width: 893px) {
-    @media (max-width: 893px) {
-        .header {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 10px;
-        }
-
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
     }
-
-    .navbar a {
-        margin: 10px 0;
-    }
-
-    #menu-icon {
-        display: block;
-    }
-
-    .timeline-items {
-        padding: 10px;
-    }
-
-    footer {
-        padding: 10px;
-    }
-
-    .scroll-btn {
-        font-size: 1.5rem;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-}
-
-
-}
-
-@media (max-width: 987px) {
- 
-
-    .home-img {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    .home-right {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .home-img img {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-}
-
-
-@media (max-width: 630px) {
-    .home-content p {
-        font-size: 1.7rem;
-        font-weight: 300px;
-        line-height: 3rem;
-        padding-left: 0;
-        margin-top: 1rem;
-        position: sticky;
-        width: 100%;
-    }
-
-    .social-icons {
-        display: flex
-    ;
-        grid-area: 1.5rem;
-        margin-top: 2rem;
-        padding-left: 0;
-    }
-
-    .contact-btn {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        padding-left: 0;
-    }
-
-    .home-img {
-        margin-bottom: 10px;
-    }
-
-    .home-left, .home-right {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
 }
 
