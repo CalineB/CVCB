@@ -1,13 +1,12 @@
 That's my website !
 
-npm i cors
-npm i dotenv
-npm i nodemailer
-npm i express
+You can download it and use the contact form for your website, you just need to keep the .css and .js related files and create a .env according to the exemple.
+Update the nodemailer.js from the server folder with your SMTP email information to receive the submitted forms directly in your email inbox.
 
-start server with 
-' cd server '
-' node nodemailer.js '
+You can also delete the server folder, replace the contact form action with "thank-you" instead of "/send-email" and upload your program on Netlify, they handle the backend part.
 
-add you email and password in .env
-It's required to create a application password from your email provider.
+npm i cors npm i dotenv npm i nodemailer npm i express
+
+start server with ' cd server ' ' node nodemailer.js '
+
+add you email and password in .env It's required to create a application password from your email provider.
